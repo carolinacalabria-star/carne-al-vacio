@@ -1,0 +1,57 @@
+:root {
+  --rojo: #EA044E;
+  --oscuro: #100423;
+  --gris: #5b556a;
+  --fondo: #f6f5f8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--oscuro);
+  background: #fff;
+  line-height: 1.5;
+}
+
+.contenedor { max-width: 560px; margin: 0 auto; padding: 0 18px; }
+
+/* Encabezado rojo */
+.hero { background: var(--rojo); color: #fff; padding: 36px 0 32px; }
+.hero .etiqueta { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; opacity: .9; margin-bottom: 10px; }
+.hero h1 { font-size: 30px; font-weight: 800; line-height: 1.12; margin-bottom: 12px; }
+.hero .bajada { font-size: 17px; }
+
+main section { margin-top: 30px; }
+h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+p { font-size: 16px; }
+
+/* Recuadro "El secreto" */
+.secreto { background: var(--fondo); border-radius: 14px; padding: 18px; }
+
+/* Pasos */
+.pasos { list-style: none; display: grid; gap: 10px; }
+.pasos li { display: flex; gap: 12px; align-items: flex-start; border: 2px solid var(--oscuro); border-radius: 14px; padding: 14px; }
+.num { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--oscuro); color: #fff; font-weight: 800; display: grid; place-items: center; }
+.pasos b { display: block; font-size: 16px; }
+.pasos small { font-size: 15px; color: var(--gris); }
+
+/* Fuentes oficiales */
+.fuentes { display: grid; gap: 12px; }
+.fuente { background: var(--fondo); border-radius: 14px; padding: 16px; }
+.fuente .org { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-bottom: 6px; }
+.fuente p { margin-bottom: 12px; }
+.fuente a { display: inline-block; font-weight: 600; font-size: 15px; color: var(--oscuro); text-decoration: none; border: 2px solid var(--oscuro); border-radius: 99px; padding: 6px 14px; }
+
+/* Listas con íconos */
+.lista { list-style: none; display: grid; gap: 8px; }
+.lista li { padding-left: 26px; position: relative; font-size: 16px; }
+.lista li::before { content: "✓"; position: absolute; left: 0; font-weight: 800; }
+.lista.alerta li::before { content: "!"; color: var(--rojo); }
+
+/* Cómo saber si está en buen estado */
+.estado { border: 2px solid var(--oscuro); border-radius: 14px; padding: 18px; }
+.estado .intro { margin-bottom: 12px; }
+.estado .cta { margin-top: 14px; color: var(--gris); }
+
+footer.contenedor { margin: 36px auto 40px; font-size: 13px; color: var(--gris); text-align: center; }
