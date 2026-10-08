@@ -24,38 +24,69 @@ body {
 .hero {
   background: linear-gradient(170deg, var(--rojo) 0%, var(--rojo-oscuro) 100%);
   color: #fff;
-  padding: 38px 0 34px;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-  box-shadow: 0 4px 20px rgba(234, 4, 78, 0.15);
+  padding: 32px 0 32px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0 6px 24px rgba(234, 4, 78, 0.2);
 }
-.hero-grid {
+.hero-marca-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 5px 14px 5px 6px;
+  border-radius: 99px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(8px);
+}
+.hero-marca-pill .logo-p {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--rojo);
+  font-weight: 800;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+.hero-marca-pill .marca-nombre {
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: .02em;
+}
+.hero-marca-pill .marca-nombre strong {
+  font-weight: 800;
+}
+.hero-cuerpo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 .hero-texto { flex: 1; }
-.hero-ilustracion {
+.hero-visual {
   flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.hero-ilustracion img {
-  width: 92px;
-  height: 92px;
+.hero-visual img {
+  width: 96px;
+  height: 96px;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
   animation: floatHero 3.5s ease-in-out infinite;
 }
 @keyframes floatHero {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-5px); }
 }
-.hero .etiqueta { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; opacity: .92; margin-bottom: 10px; }
-.hero h1 { font-size: 30px; font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
-.hero .bajada { font-size: 17px; opacity: .96; }
+.hero .etiqueta { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; opacity: .92; margin-bottom: 8px; }
+.hero h1 { font-size: 28px; font-weight: 800; line-height: 1.15; margin-bottom: 10px; }
+.hero .bajada { font-size: 16px; opacity: .96; }
 
 main section { margin-top: 32px; }
 h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
@@ -69,12 +100,18 @@ p { font-size: 16px; }
   margin-bottom: 12px;
 }
 .titulo-con-icono h2 { margin-bottom: 0; }
-.titulo-con-icono img {
-  flex: none;
-  display: block;
+.icono-seccion {
   width: 32px;
   height: 32px;
+  flex: none;
+  display: grid;
+  place-items: center;
+}
+.icono-seccion img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 /* Recuadro "El secreto" con ícono */
@@ -86,7 +123,7 @@ p { font-size: 16px; }
   padding: 18px;
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
 }
 .secreto .icono-bloque {
   flex: none;
@@ -99,59 +136,51 @@ p { font-size: 16px; }
   box-shadow: 0 2px 10px rgba(234, 4, 78, 0.14);
 }
 .secreto .icono-bloque img {
-  width: 36px;
-  height: 36px;
+  max-width: 36px;
+  max-height: 36px;
   object-fit: contain;
 }
 .secreto p { margin: 0; }
 
 /* Pasos */
 .pasos { list-style: none; display: grid; gap: 12px; }
-.pasos li {
+.paso-card {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
   border: 1px solid var(--borde-suave);
   background: #fff;
   border-radius: 14px;
-  padding: 16px;
+  padding: 14px 16px;
   box-shadow: 0 2px 10px rgba(16, 4, 35, 0.04);
 }
-.paso-icono {
+.paso-icono-wrap {
   flex: none;
-  position: relative;
-  width: 48px;
-  height: 48px;
-  background: var(--rojo-claro);
-  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(234, 4, 78, 0.15);
+  gap: 10px;
 }
-.paso-icono img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-.paso-icono .num {
-  position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 20px;
-  height: 20px;
-  font-size: 11px;
-  font-weight: 800;
+.paso-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   background: var(--rojo);
   color: #fff;
-  border-radius: 50%;
+  font-weight: 800;
+  font-size: 12px;
   display: grid;
   place-items: center;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  flex: none;
+  box-shadow: 0 2px 6px rgba(234, 4, 78, 0.25);
 }
-.pasos b { display: block; font-size: 16px; margin-bottom: 2px; }
-.pasos small { font-size: 15px; color: var(--gris); line-height: 1.4; }
+.paso-icono-wrap img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+.paso-texto b { display: block; font-size: 16px; margin-bottom: 2px; }
+.paso-texto small { font-size: 15px; color: var(--gris); line-height: 1.4; display: block; }
 
 /* Fuentes oficiales */
 .fuentes { display: grid; gap: 12px; }
@@ -222,7 +251,7 @@ p { font-size: 16px; }
 
 /* Footer PeYa */
 .footer-peya {
-  margin: 48px auto 44px;
+  margin: 44px auto 44px;
   text-align: center;
 }
 .footer-cierre {
@@ -232,10 +261,10 @@ p { font-size: 16px; }
   gap: 8px;
 }
 .footer-cierre img {
-  width: 74px;
-  height: auto;
+  width: 68px;
+  height: 64px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
   margin-bottom: 2px;
 }
 .footer-marca {
@@ -255,32 +284,30 @@ p { font-size: 16px; }
 @media (min-width: 900px) {
   .contenedor { max-width: 980px; padding: 0 32px; }
 
-  .hero { padding: 64px 0 56px; border-radius: 0 0 32px 32px; }
-  .hero-grid { gap: 40px; }
-  .hero h1 { font-size: 46px; max-width: 680px; }
+  .hero { padding: 56px 0 52px; border-radius: 0 0 32px 32px; }
+  .hero-cuerpo { gap: 40px; }
+  .hero h1 { font-size: 44px; max-width: 680px; }
   .hero .bajada { font-size: 20px; max-width: 620px; }
-  .hero-ilustracion img { width: 148px; height: 148px; }
+  .hero-visual img { width: 136px; height: 136px; }
 
   main section { margin-top: 48px; }
   h2 { font-size: 24px; }
   main > section > p { max-width: 720px; font-size: 17px; }
 
   .pasos { grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .pasos li { flex-direction: column; padding: 24px 20px; text-align: center; }
-  .paso-icono {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 12px auto;
-    border-radius: 14px;
+  .paso-card {
+    flex-direction: column;
+    padding: 24px 20px;
+    text-align: center;
+    align-items: center;
   }
-  .paso-icono img { width: 40px; height: 40px; }
-  .paso-icono .num {
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-    bottom: -3px;
-    right: -3px;
+  .paso-icono-wrap {
+    flex-direction: row;
+    margin-bottom: 12px;
+    gap: 12px;
   }
+  .paso-icono-wrap img { width: 48px; height: 48px; }
+  .paso-badge { width: 26px; height: 26px; font-size: 13px; }
 
   .fuentes { grid-template-columns: 1fr 1fr; gap: 16px; }
   .fuente { display: flex; flex-direction: column; }
