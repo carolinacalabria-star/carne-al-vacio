@@ -3,9 +3,9 @@
 ### Ilustraciones Oficiales PedidosYa (PedidosYa Market)
 Las ilustraciones 3D / vectoriales utilizadas en las secciones de la página forman parte de la librería de marca y diseño oficial de **PedidosYa (Fénix Design System)** para PedidosYa Market:
 - `img/peya/martEnabled3Medium.png`: Isologotipo e ilustración de tienda PedidosYa Market (Hero).
-- `img/peya/clockEnabled1Small.png`: Reloj 3D para la sección de reposo y oreo (El secreto).
+- `img/peya/clockEnabled1Small.png`: Reloj 3D para la sección de reposo y aireado (El secreto).
 - `img/peya/foodBagEnabled1OpenSmall.png`: Bolsa abierta para el Paso 1 de preparación.
-- `img/peya/timeFastEnabledXSmall.png`: Indicador de tiempo rápido para el Paso 2 de oreo.
+- `img/peya/timeFastEnabledXSmall.png`: Indicador de tiempo rápido para el Paso 2 de aireado.
 - `img/peya/chefEnabledSmall.png`: Gorro de chef para el Paso 3 de cocción.
 - `img/peya/docEnabled1SmallPositive.png`: Documento con tilde de validación para la sección de especialistas (SENASA / Ministerio de Salud).
 - `img/peya/checklistEnabled1SmallPositive.png`: Tablero checklist para la sección de conservación.
