@@ -1,7 +1,7 @@
 // Contador de escaneos (opcional).
 // Si pegás acá la URL /exec de tu Apps Script, cada visita anota la tienda en tu Sheet.
 // Si lo dejás vacío, la página funciona igual y no cuenta nada.
-const LOG_URL = '';
+const LOG_URL = 'https://script.google.com/macros/s/AKfycbxtT6Ua_Bmmh3Q3PUm942xJ1M_nqFTZIAAweYm9DEAAUxzcb-P2UGQuEUfFRIq0BQ0LHA/exec';
 
 (function () {
   if (!LOG_URL) return;
